@@ -19,13 +19,18 @@ samtools | 1.18
 star | 2.7.11a
 openjdk | 17.0.8
 mixcr | 4.7.0
+numpy | 1.26.0
+pandas | 2.1.1
+scipy | 1.11.3
+matplotlib | 3.8.0
+python-levenshtein | 0.22.0
 
 ### Installation ###
 Installation should finish within 10 minutes (Epyc 7542). 
 
 (1) Download the *Pipeline* folder.  
 (2) Setup the environment using conda:  
-`conda create -n taiseq python=3.10.12 cutadapt=4.5 bzip2=1.0.8 bedtools=2.31.0 bowtie2=2.5.1 pigz=2.6 samtools=1.18 star=2.7.11a openjdk=17.0.8`  
+`conda create -n taiseq python=3.10.12 cutadapt=4.5 bzip2=1.0.8 bedtools=2.31.0 bowtie2=2.5.1 pigz=2.6 samtools=1.18 star=2.7.11a openjdk=17.0.8 numpy=1.26.0 pandas=2.1.1 scipy=1.11.3 matplotlib=3.8.0 python-levenshtein=0.22.0`  
 Then  
 `conda activate taiseq`  
 (3) To run the TCR or BCR pipeline, you also need to install mixcr 4.7.0. Please install mixcr according to its instructions.
