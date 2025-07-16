@@ -39,14 +39,13 @@ Then
 `genomeDir`: STAR references
 `THREAD`: threads to run the pipeline  
 `minUMI`: minimal umis for a barcode to be kept in the pipeline. To run the demo, set to 0. Otherwise, set to 50.  
+`sample`: enter the sample names (separated by space if you have multiple samples). **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz, where i is your sample name. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**  
 
 (2) Additionally, if different samples are loaded to plate 1, you may set the sample demultiplexing parameters:  
 `SPLIT_NUM`: how many samples are loaded to plate 1 (e.g., 2)  
 `SPLIT_PATTERN`: the column counts of each sample loaded, separated by space (e.g., "4 8" indicates that the first sample is loaded to column 1-4, and the second sample is loaded to column 5-12)  
 
-(3) Finally, enter the sample name (${i}) in the for loop. **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**  
-
-(4) Execute `bash /Pipeline/RNA/scRNA.sh` to run the TAI-RNA pipeline. You will get a ${i}_out.tar.gz file. Decompresse this file, and load into Seurat with _Read10X_.
+(3) Execute `bash /Pipeline/RNA/scRNA.sh` to run the TAI-RNA pipeline. You will get a ${i}_out.tar.gz file. Decompresse this file, and load into Seurat with _Read10X_.
 
 #### ATAC ####
 (1) Setup parameters. Open `./Pipeline/ATAC/scATAC.sh`, and set:  
@@ -55,14 +54,13 @@ Then
 `genomeDir`: bowtie2 references
 `THREAD`: threads to run the pipeline  
 `MINFRAGS`: minimal fragments for a barcode to be kept in the pipeline. To run the demo, set to 0. Otherwise, set to 50.  
+`sample`: enter the sample names (separated by space if you have multiple samples). **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz, where i is your sample name. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**  
 
 (2) Additionally, if different samples are loaded to plate 1, you may set the sample demultiplexing parameters:  
 `SPLIT_NUM`: how many samples are loaded to plate 1 (e.g., 2)  
 `SPLIT_PATTERN`: the column counts of each sample loaded, separated by space (e.g., "4 8" indicates that the first sample is loaded to column 1-4, and the second sample is loaded to column 5-12)  
 
-(3) Finally, enter the sample name (${i}) in the for loop. **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**
-
-(4) Execute `bash /Pipeline/ATAC/scATAC.sh` to run the TAI-ATAC pipeline. You will get a ${i}_ArchR.tsv.gz file. This file can be read by ArchR.
+(3) Execute `bash /Pipeline/ATAC/scATAC.sh` to run the TAI-ATAC pipeline. You will get a ${i}_ArchR.tsv.gz file. This file can be read by ArchR.
 
 #### TCR ####
 (1) Setup parameters. Open `./Pipeline/TCR/scTCR_circ_4.7.sh` or `scTCR_vmix_4.7.sh`, and set:  
@@ -70,13 +68,12 @@ Then
 `workingDIR`: data folder that contains fastq file folders (see demo).   
 `SPECIES`: hsa for human, and mmu for mouse
 `THREAD`: threads to run the pipeline  
+`sample`: enter the sample names (separated by space if you have multiple samples). **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz, where i is your sample name. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**  
 
 (2) Additionally, if different samples are loaded to plate 1, you may set the sample demultiplexing parameters:  
 `SPLIT_PATTERN`: the column counts of each sample loaded, separated by space (e.g., "4 8" indicates that the first sample is loaded to column 1-4, and the second sample is loaded to column 5-12)  
 
-(3) Finally, enter the sample name (${i}) in the for loop. **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**
-
-(4) Execute `bash /Pipeline/TCR/scTCR_circ_4.7.sh` to run the TAI-TCR (full-length) pipeline. Execute `bash /Pipeline/TCR/scTCR_vmix_4.7.sh` to run the TAI-TCR (V primer mix) pipeline. The ${i}_mixcr_clones_umi.tsv and ${i}_mixcr_clones_noumi.tsv are the desired output files.  
+(3) Execute `bash /Pipeline/TCR/scTCR_circ_4.7.sh` to run the TAI-TCR (full-length) pipeline. Execute `bash /Pipeline/TCR/scTCR_vmix_4.7.sh` to run the TAI-TCR (V primer mix) pipeline. The ${i}_mixcr_clones_umi.tsv and ${i}_mixcr_clones_noumi.tsv are the desired output files.  
 
 ### Run demo ###
 Demos of all modelity should finish within 10 minutes.  
