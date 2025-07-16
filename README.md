@@ -83,6 +83,7 @@ Demos of all modelity should finish within 10 minutes.
 (1) Download the *Pipeline* folder and the *TAI-demo* folder.  
 (2) Install the pipeline.  
 (3) Run the pipeline according to the instructions above. Note: `workingDIR` should be set to the *TAI-demo* folder.  
+You are expected to get test_rna_out.tar.gz for the RNA pipeline, test_ata_ArchR.tsv.gz for the ATAC pipeline, test_vmix_mixcr_clones_noumi.tsv + test_vmix_mixcr_clones_umi.tsv for the TAI-TCR-vmix pipeline, and test_circ_mixcr_clones_noumi.tsv + test_circ_mixcr_clones_umi.tsv for the TAI-TCR-circ pipeline.  
 
 
 
