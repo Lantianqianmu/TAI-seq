@@ -19,7 +19,7 @@ Then
 `gtfDir`: the genome gtf file  
 `genomeDir`: STAR references
 `THREAD`: threads to run the pipeline  
-`minUMI`: minimal umis for a barcode to be kept in the pipeline. To run the demo, set to 0  
+`minUMI`: minimal umis for a barcode to be kept in the pipeline. To run the demo, set to 0. Otherwise, set to 50.  
 
 Additionally, if different samples are loaded to plate 1, you may set the sample demultiplexing parameters:  
 `SPLIT_NUM`: how many samples are loaded to plate 1 (e.g., 2)  
@@ -35,7 +35,7 @@ Execute `bash /Pipeline/RNA/scRNA.sh` to run the TAI-RNA pipeline. You will get 
 `workingDIR`: data folder that contains fastq file folders (see demo).   
 `genomeDir`: bowtie2 references
 `THREAD`: threads to run the pipeline  
-`MINFRAGS`: minimal fragments for a barcode to be kept in the pipeline. To run the demo, set to 0  
+`MINFRAGS`: minimal fragments for a barcode to be kept in the pipeline. To run the demo, set to 0. Otherwise, set to 50.  
 
 Additionally, if different samples are loaded to plate 1, you may set the sample demultiplexing parameters:  
 `SPLIT_NUM`: how many samples are loaded to plate 1 (e.g., 2)  
