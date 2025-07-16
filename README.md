@@ -60,13 +60,13 @@ Then
 `SPLIT_NUM`: how many samples are loaded to plate 1 (e.g., 2)  
 `SPLIT_PATTERN`: the column counts of each sample loaded, separated by space (e.g., "4 8" indicates that the first sample is loaded to column 1-4, and the second sample is loaded to column 5-12)  
 
-(3) Execute `bash /Pipeline/ATAC/scATAC.sh` to run the TAI-ATAC pipeline. You will get a ${i}_ArchR.tsv.gz file. This file can be read by ArchR.
+(3) Execute `bash /Pipeline/ATAC/scATAC.sh` to run the TAI-ATAC pipeline. You will get a ${i}_ArchR.tsv.gz file. This file can be read by ArchR.  
 
 #### TCR ####
 (1) Setup parameters. Open `./Pipeline/TCR/scTCR_circ_4.7.sh` or `scTCR_vmix_4.7.sh`, and set:  
 `scriptDIR`: the _Pipeline_ folder  
 `workingDIR`: data folder that contains fastq file folders (see demo).   
-`SPECIES`: hsa for human, and mmu for mouse
+`SPECIES`: hsa for human, and mmu for mouse  
 `THREAD`: threads to run the pipeline  
 `sample`: enter the sample names (separated by space if you have multiple samples). **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz, where i is your sample name. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**  
 
