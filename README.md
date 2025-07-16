@@ -79,8 +79,8 @@ Finally, enter the sample name (${i}) in the for loop. **Critical: the fastq fil
 Execute `bash /Pipeline/TCR/scTCR_circ_4.7.sh` to run the TAI-TCR (full-length) pipeline. Execute `bash /Pipeline/TCR/scTCR_vmix_4.7.sh` to run the TAI-TCR (V primer mix) pipeline. The ${i}_mixcr_clones_umi.tsv and ${i}_mixcr_clones_noumi.tsv are the desired output files.  
 
 ### Run demo ###
-(1) Download the *Pipeline* folder and the *TAI-demo* folder. 
-(2) Install the pipeline.
+(1) Download the *Pipeline* folder and the *TAI-demo* folder.  
+(2) Install the pipeline.  
 (3) Run the pipeline according to the instructions above. Note: `workingDIR` should be set to the *TAI-demo* folder.
 
 
