@@ -50,7 +50,7 @@ Then
 `SPLIT_NUM`: how many samples are loaded to plate 1 (e.g., 2)  
 `SPLIT_PATTERN`: the column counts of each sample loaded, separated by space (e.g., "4 8" indicates that the first sample is loaded to column 1-4, and the second sample is loaded to column 5-12)  
 
-(3) Execute `bash /Pipeline/RNA/scRNA.sh` to run the TAI-RNA pipeline. You will get a _${i}_out.tar.gz_ file. Decompresse this file, and load into Seurat with _Read10X_.
+(3) Execute `bash ./Pipeline/RNA/scRNA.sh` to run the TAI-RNA pipeline. You will get a _${i}_out.tar.gz_ file. Decompresse this file, and load into Seurat with _Read10X_.
 
 #### ATAC ####
 (1) Setup parameters. Open `./Pipeline/ATAC/scATAC.sh`, and set:  
@@ -65,7 +65,7 @@ Then
 `SPLIT_NUM`: how many samples are loaded to plate 1 (e.g., 2)  
 `SPLIT_PATTERN`: the column counts of each sample loaded, separated by space (e.g., "4 8" indicates that the first sample is loaded to column 1-4, and the second sample is loaded to column 5-12)  
 
-(3) Execute `bash /Pipeline/ATAC/scATAC.sh` to run the TAI-ATAC pipeline. You will get a _${i}_ArchR.tsv.gz_ file. This file can be read by ArchR.  
+(3) Execute `bash ./Pipeline/ATAC/scATAC.sh` to run the TAI-ATAC pipeline. You will get a _${i}_ArchR.tsv.gz_ file. This file can be read by ArchR.  
 
 #### TCR ####
 (1) Setup parameters. Open `./Pipeline/TCR/scTCR_circ_4.7.sh` or `scTCR_vmix_4.7.sh`, and set:  
@@ -78,7 +78,7 @@ Then
 (2) Additionally, if different samples are loaded to plate 1, you may set the sample demultiplexing parameters:  
 `SPLIT_PATTERN`: the column counts of each sample loaded, separated by space (e.g., "4 8" indicates that the first sample is loaded to column 1-4, and the second sample is loaded to column 5-12)  
 
-(3) Execute `bash /Pipeline/TCR/scTCR_circ_4.7.sh` to run the TAI-TCR (full-length) pipeline. Execute `bash /Pipeline/TCR/scTCR_vmix_4.7.sh` to run the TAI-TCR (V primer mix) pipeline. The _${i}_mixcr_clones_umi.tsv_ and _${i}_mixcr_clones_noumi.tsv_ are the desired output files.  
+(3) Execute `bash ./Pipeline/TCR/scTCR_circ_4.7.sh` to run the TAI-TCR (full-length) pipeline. Execute `bash ./Pipeline/TCR/scTCR_vmix_4.7.sh` to run the TAI-TCR (V primer mix) pipeline. The _${i}_mixcr_clones_umi.tsv_ and _${i}_mixcr_clones_noumi.tsv_ are the desired output files.  
 
 ### Run demo ###
 Demos of all modelity should finish within 10 minutes.  
