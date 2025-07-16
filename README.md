@@ -35,8 +35,8 @@ Then
 (1) Setup parameters. Open `./Pipeline/RNA/scRNA.sh`, and set:  
 `scriptDIR`: the _Pipeline_ folder  
 `workingDIR`: data folder that contains fastq file folders (see demo).   
-`gtfDir`: the genome gtf file  
-`genomeDir`: STAR references 
+`gtfDir`: the genome gtf file   
+`genomeDir`: STAR references  
 `THREAD`: threads to run the pipeline  
 `minUMI`: minimal umis for a barcode to be kept in the pipeline. To run the demo, set to 0. Otherwise, set to 50.  
 `sample`: enter the sample names (separated by space if you have multiple samples). **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz, where i is your sample name. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**  
@@ -52,7 +52,7 @@ Then
 `scriptDIR`: the _Pipeline_ folder  
 `workingDIR`: data folder that contains fastq file folders (see demo).   
 `genomeDir`: bowtie2 references  
-`THREAD`: threads to run the pipeline    
+`THREAD`: threads to run the pipeline     
 `MINFRAGS`: minimal fragments for a barcode to be kept in the pipeline. To run the demo, set to 0. Otherwise, set to 50.  
 `sample`: enter the sample names (separated by space if you have multiple samples). **Critical: the fastq files must be named as ${i}_R1.fq.gz and ${i}_R2.fq.gz, where i is your sample name. They must be put in a folder named ${i}, and the folder is placed in ${workingDIR}**  
 
