@@ -65,7 +65,7 @@ Then
 (4) Execute `bash /Pipeline/ATAC/scATAC.sh` to run the TAI-ATAC pipeline. You will get a ${i}_ArchR.tsv.gz file. This file can be read by ArchR.
 
 #### TCR ####
-(1) Setup parameters. Open `./Pipeline/TCR/scTCR_circ_4.7.sh or scTCR_vmix_4.7.sh`, and set:  
+(1) Setup parameters. Open `./Pipeline/TCR/scTCR_circ_4.7.sh` or `scTCR_vmix_4.7.sh`, and set:  
 `scriptDIR`: the _Pipeline_ folder  
 `workingDIR`: data folder that contains fastq file folders (see demo).   
 `SPECIES`: hsa for human, and mmu for mouse
