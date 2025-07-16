@@ -1,8 +1,27 @@
 # TAI-seq #
 
 ## TAI-seq Pipeline ##
+### System requirements ###
+The pipeline relies on _Perl 5.32.1_, and therefore runs only on a UNIX-based system. We have tested the pipeline on _Ubuntu 22.04_ server in our lab.  
+The ATAC pipeline requires >= 32 GB memory, RNA >= 64 GB, and TCR/BCR >= 256 GB. It is recommended to have at least 8 cores. We typically run the pipeline on a server with dual Epyc 7542 and 512 GB memory.
+
+### Software dependencies ###
+Dependencies  | Version
+------------- | -------------
+Perl | 5.32.1
+python | 3.10.12
+cutadapt | 4.5
+bzip2 | 1.0.8
+bedtools | 2.31.0
+bowtie2 | 2.5.1
+pigz | 2.6
+samtools | 1.18
+star | 2.7.11a
+openjdk | 17.0.8
+mixcr | 4.7.0
+
 ### Installation ###
-The pipeline relies on _Perl 5.32.1_, and therefore runs only on a UNIX-based system. We use Ubuntu 22.04 server in our lab. Installation should finish within 10 minutes (Epyc 7542, 512 GB memory). 
+Installation should finish within 10 minutes (Epyc 7542). 
 
 (1) Download the *Pipeline* folder.  
 (2) Setup the environment using conda:  
@@ -59,8 +78,10 @@ Finally, enter the sample name (${i}) in the for loop. **Critical: the fastq fil
 
 Execute `bash /Pipeline/TCR/scTCR_circ_4.7.sh` to run the TAI-TCR (full-length) pipeline. Execute `bash /Pipeline/TCR/scTCR_vmix_4.7.sh` to run the TAI-TCR (V primer mix) pipeline. The ${i}_mixcr_clones_umi.tsv and ${i}_mixcr_clones_noumi.tsv are the desired output files.  
 
-
-
+### Run demo ###
+(1) Download the *Pipeline* folder and the *TAI-demo* folder. 
+(2) Install the pipeline.
+(3) Run the pipeline according to the instructions above. Note: `workingDIR` should be set to the *TAI-demo* folder.
 
 
 
